@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Metaverse SDK Demo</string>
+    <string name="error_icon_content_description">Error icon</string>
+    <string name="error_text">Error loading storyboard summary!</string>
+    <string name="error_action">Reload</string>
+    <string name="storyboard_icon_content_description">Storyboard icon</string>
+    <string-array name="storyboard_ids">
+        <item>cdf2ba5a-0359-4db2-87fa-40cb516dd4f7</item>
+        <item>d414d8fe-d22a-411f-b817-2cd3b35916f3</item>
+        <item>e81abb52-cedb-4e76-ac04-87bf8b293333</item>
+        <item>0404da1e-beac-4aea-ab35-1766bb4723e7</item>
+        <item>446b6f56-b9f8-4ad3-8f1f-750c6bfaebef</item>
+    </string-array>
+</resources>

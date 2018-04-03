@@ -1,0 +1,57 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.versions = [
+        'minSdk': 19,
+        'compileSdk': 27,
+        'kotlin': '1.2.40',
+        'supportLibrary': '27.1.1',
+        'constraintLayout': '1.0.2',
+        'multidex': '1.0.3',
+        'timber': '4.6.0',
+        'storyboardSdk': '1.0.0-alpha1',
+    ]
+
+    ext.deps = [
+        'support': [
+            'appCompat': "com.android.support:appcompat-v7:${versions.supportLibrary}",
+            'cardview': "com.android.support:cardview-v7:${versions.supportLibrary}",
+            'recyclerview': "com.android.support:recyclerview-v7:${versions.supportLibrary}",
+            'constraintLayout': "com.android.support.constraint:constraint-layout:${versions.constraintLayout}",
+            'multidex': "com.android.support:multidex:${versions.multidex}"
+        ],
+        'kotlin': [
+            'stdLibJdk7': "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
+        ],
+        'timber': "com.jakewharton.timber:timber:${versions.timber}",
+        'gometa': [
+            'metaverseSdk': "io.gometa.metaverse:storyboard-sdk:${versions.storyboardSdk}"
+        ]
+    ]
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'http://maven2.gometa.io' }
+    }
+    configurations.all {
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

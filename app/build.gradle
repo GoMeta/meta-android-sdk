@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    signingConfigs {
+        release {
+            Properties localProps = new Properties()
+            localProps.load(new FileInputStream(file('../local.properties')))
+            keyAlias localProps['keyAlias']
+            keyPassword localProps['keyPassword']
+            storeFile file(localProps['storeFile'])
+            storePassword localProps['storePassword']
+        }
+    }
+    compileSdkVersion versions.compileSdk
+    defaultConfig {
+        applicationId "io.gometa.metaverse.sdk.example.metaversesdkdemo"
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.compileSdk
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            debuggable true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    flavorDimensions "language"
+    productFlavors {
+        java {
+            dimension "language"
+            applicationIdSuffix ".java"
+            versionNameSuffix "-java"
+            buildConfigField("String", "LANGUAGE", "\"Java\"")
+        }
+        kotlin {
+            dimension "language"
+            applicationIdSuffix ".kotlin"
+            versionNameSuffix "-kotlin"
+            buildConfigField("String", "LANGUAGE", "\"Kotlin\"")
+        }
+    }
+    sourceSets {
+        java {
+            java.srcDirs += 'src/java/java'
+        }
+        kotlin {
+            java.srcDirs += 'src/kotlin/java'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation deps.kotlin.stdLibJdk7
+    implementation deps.support.appCompat
+    implementation deps.support.cardview
+    implementation deps.support.recyclerview
+    implementation deps.support.constraintLayout
+    implementation deps.support.multidex
+    implementation deps.timber
+    implementation deps.gometa.metaverseSdk
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}
