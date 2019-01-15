@@ -1,5 +1,4 @@
 $dokka.format:jekyll
 $dokka.linkExtension:html
 
-io.gometa.metaverse.storyboard.sdk
-io.gometa.metaverse.storyboard.sdk.model
+io.gometa.sdk

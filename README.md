@@ -5,7 +5,7 @@
 Render [Metaverse](https://gometa.io) experiences inside of your own app or framework. Build, test,
 and iterate with Metaverse Studio  and Metaverse Browser, and then render in your own app.
 
-[**Full Documentation**](https://gometa.github.io/meta-android-sdk/io.gometa.metaverse.storyboard.sdk/-meta/index.html)
+[**Full Documentation**](https://gometa.github.io/meta-android-sdk/io.gometa.sdk/-meta/index.html)
 
 ## Prerequisites
 
@@ -36,11 +36,11 @@ In your app's module's gradle.build, include the following dependency:
 
 ```groovy
 dependencies {
-    implementation 'io.gometa.metaverse:sdk:1.0.0-alpha1'
+    implementation 'io.gometa.metaverse:storyboard-sdk:1.0.0-alpha3'
 }
 ```
 
-Alternatively, replace `-alpha1` with `-SNAPSHOT` to get the latest build (may be unstable).
+Alternatively, replace `-alpha3` with `-SNAPSHOT` to get the latest build (may be unstable).
 
 ## Proguard
 
@@ -64,7 +64,7 @@ test) are:
 -dontwarn com.google.errorprone.annotations.**
 
 # Metaverse SDK
--keep class io.gometa.metaverse.storyboard.sdk.internal.cloud.** { *; }
+-keep class io.gometa.sdk.internal.cloud.** { *; }
 ```
 
 ## Configure the SDK
@@ -86,8 +86,8 @@ The easiest way to provide both keys in your `AndroidManifest.xml` like so:
 ## Load a storyboard's summary
 
 The Metaverse SDK allows you to access your storyboard's summary details via an endpoint,
-[Meta.loadStoryboardSummary](https://gometa.github.io/meta-android-sdk/io.gometa.metaverse.storyboard.sdk/-meta/load-storyboard-summary.html).
-For this endpoint to work, [Meta.initialize](https://gometa.github.io/meta-android-sdk/io.gometa.metaverse.storyboard.sdk/-meta/initialize.html)
+[Meta.loadStoryboardSummary](https://gometa.github.io/meta-android-sdk/io.gometa.sdk/-meta/load-storyboard-summary.html).
+For this endpoint to work, [Meta.initialize](https://gometa.github.io/meta-android-sdk/io.gometa.sdk/-meta/initialize.html)
 must be called prior. Normally this is done automatically when presenting a storyboard, but if your
 app hasn't presented one yet you'll need to call the initialize method (usually in your app's
 `Application` class' `onCreate` method). Note that you can also pass your API key via this endpoint,
@@ -144,8 +144,8 @@ argument.
 If you create something awesome, we'd love to see it and feature it here! Create a PR on this Readme
 to add your project, or let us know about it via email (support@gometa.io) or Facebook/Twitter.
 
-# Package io.gometa.metaverse.storyboard.sdk
-This package provides the entry point for the Metaverse SDK via the [Meta](https://gometa.github.io/meta-android-sdk/io.gometa.metaverse.storyboard.sdk/-meta/index.html) class.
+# Package io.gometa.sdk
+This package provides the entry point for the Metaverse SDK via the [Meta](https://gometa.github.io/meta-android-sdk/io.gometa.sdk/-meta/index.html) class.
 
-# Package io.gometa.metaverse.storyboard.sdk.model
+# Package io.gometa.sdk.model
 This package provides all the public models used by the Metaverse SDK.

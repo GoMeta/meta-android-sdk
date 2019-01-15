@@ -1,7 +1,7 @@
 package io.gometa.metaverse.sdk.example.metaversesdkdemo
 
-import android.support.multidex.MultiDexApplication
-import io.gometa.metaverse.storyboard.sdk.Meta
+import androidx.multidex.MultiDexApplication
+import io.gometa.sdk.Meta
 import timber.log.Timber
 
 /**

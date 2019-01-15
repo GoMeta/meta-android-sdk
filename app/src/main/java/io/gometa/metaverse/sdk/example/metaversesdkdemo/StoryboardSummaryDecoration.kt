@@ -2,7 +2,7 @@ package io.gometa.metaverse.sdk.example.metaversesdkdemo
 
 import android.content.Context
 import android.graphics.Rect
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 
 /**
@@ -23,7 +23,8 @@ class StoryboardSummaryDecoration(
         state: RecyclerView.State
     ) {
         val itemPosition = parent.getChildAdapterPosition(view)
+        val itemCount = parent.adapter?.itemCount ?: 0
         outRect.set(horizontalMargin, verticalMargin, horizontalMargin,
-            if (itemPosition == parent.adapter.itemCount - 1) verticalMargin else 0)
+            if (itemPosition == itemCount) verticalMargin else 0)
     }
 }

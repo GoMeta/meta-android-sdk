@@ -1,16 +1,16 @@
 package io.gometa.metaverse.sdk.example.metaversesdkdemo;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.Transformations;
-import android.arch.lifecycle.ViewModel;
-import android.support.annotation.NonNull;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Transformations;
+import androidx.lifecycle.ViewModel;
+import androidx.annotation.NonNull;
 
 import java.util.HashMap;
 
-import io.gometa.metaverse.storyboard.sdk.Meta;
-import io.gometa.metaverse.storyboard.sdk.Result;
-import io.gometa.metaverse.storyboard.sdk.model.StoryboardSummary;
+import io.gometa.sdk.Meta;
+import io.gometa.sdk.Result;
+import io.gometa.sdk.model.StoryboardSummary;
 
 /**
  *

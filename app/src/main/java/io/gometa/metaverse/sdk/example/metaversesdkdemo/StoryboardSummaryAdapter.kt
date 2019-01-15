@@ -1,12 +1,12 @@
 package io.gometa.metaverse.sdk.example.metaversesdkdemo
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
-import io.gometa.metaverse.storyboard.sdk.Result
-import io.gometa.metaverse.storyboard.sdk.model.StoryboardSummary
+import io.gometa.sdk.Result
+import io.gometa.sdk.model.StoryboardSummary
 import kotlinx.android.synthetic.main.view_storyboard_summary.view.*
 
 /**

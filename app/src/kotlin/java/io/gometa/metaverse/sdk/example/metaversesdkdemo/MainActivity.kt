@@ -1,14 +1,14 @@
 package io.gometa.metaverse.sdk.example.metaversesdkdemo
 
 import android.app.Activity
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import android.widget.Toast
-import io.gometa.metaverse.storyboard.sdk.Meta
+import io.gometa.sdk.Meta
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), StoryboardSummaryAdapter.StoryboardSummaryClickListener {

@@ -1,8 +1,8 @@
 ---
-title: Metaverse SDK
+title: MetaverseSDK
 ---
 
-[Metaverse SDK](./index.html)
+[MetaverseSDK](./index.html)
 
 ![Meta Android SDK](logo.png?taw=true)
 
@@ -40,11 +40,11 @@ In your app's module's gradle.build, include the following dependency:
 
 ``` groovy
 dependencies {
-    implementation 'io.gometa.metaverse:sdk:1.0.0-alpha2'
+    implementation 'io.gometa.metaverse:storyboard-sdk:1.0.0-alpha3'
 }
 ```
 
-Alternatively, replace `-alpha1` with `-SNAPSHOT` to get the latest build (may be unstable).
+Alternatively, replace `-alpha3` with `-SNAPSHOT` to get the latest build (may be unstable).
 
 ## Proguard
 
@@ -70,7 +70,7 @@ test) are:
 -dontwarn com.google.errorprone.annotations.**
 
 # Metaverse SDK
--keep class io.gometa.metaverse.storyboard.sdk.internal.cloud.** { *; }
+-keep class io.gometa.sdk.internal.cloud.** { *; }
 ```
 
 ## Configure the SDK
@@ -159,8 +159,7 @@ to add your project, or let us know about it via email (support@gometa.io) or Fa
 
 ### Packages
 
-| [io.gometa.metaverse.storyboard.sdk](io.gometa.metaverse.storyboard.sdk/index.html) | This package provides the entry point for the Metaverse SDK via the [Meta](https://gometa.github.io/meta-android-sdk/io.gometa.metaverse.storyboard.sdk/-meta/index.html) class. |
-| [io.gometa.metaverse.storyboard.sdk.model](io.gometa.metaverse.storyboard.sdk.model/index.html) | This package provides all the public models used by the Metaverse SDK. |
+| [io.gometa.sdk](io.gometa.sdk/index.html) |  |
 
 ### Index
 
